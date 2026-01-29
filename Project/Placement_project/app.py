@@ -7,7 +7,7 @@ st.title("Placement Predictor")
 cgpa = st.number_input("Enter CGPA", 0.0, 10.0, 0.1)
 iq = st.number_input("Enter IQ", 0.0, 200.0, 1.0)
 
-# 🔒 fixed values from training data
+# fixed values from training data
 cgpa_mean = 6.5
 cgpa_std = 0.8
 iq_mean = 110
@@ -26,6 +26,6 @@ if st.button("Predict"):
     prediction = model.predict(scaled_input)
 
     if prediction[0] == 1:
-        st.success("🎉 Student will be Placed")
+        st.success(" Student will be Placed")
     else:
-        st.error("❌ Student will NOT be Placed")
+        st.error(" Student will NOT be Placed")
